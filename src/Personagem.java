@@ -34,17 +34,17 @@ public class Personagem {
                 System.out.printf("Pare! O %s já está morto!\n", inimigo.nomeTipo);
 
             // Caso ataque bem sucedido
-            }else if(this.forca > inimigo.forca && this.destreza > inimigo.destreza){   
+            }else if(this.destreza > inimigo.destreza){   
                 inimigo.recebeDano(this.calculaDano());
                 System.out.printf("O ataque foi efetivo com %.1f pontos de dano!\n", this.calculaDano());
 
             // Caso ataque mal sucedido
-            }else if(this.forca < inimigo.forca || this.destreza < inimigo.destreza){   
+            }else if(this.destreza < inimigo.destreza){   
                 this.recebeDano(inimigo.calculaDano());
                 System.out.printf("O ataque foi inefetivo e revidado com %.1f pontos de dano!\n", inimigo.calculaDano());
 
             // Caso ataque defendido
-            }else if(this.forca == inimigo.forca || this.destreza == inimigo.destreza){ 
+            }else if(this.destreza == inimigo.destreza){ 
                 System.out.printf("O ataque foi defendido, ninguem se machucou!\n");
             }            
         }
